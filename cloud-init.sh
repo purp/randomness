@@ -4,6 +4,7 @@
 sed -i -e 's/^PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config && service sshd restart
 # update system packages & install some things
 yum update -y
+yum groupinstall "Development Tools"
 yum install bind-utils
 
 # Set up non-root user
